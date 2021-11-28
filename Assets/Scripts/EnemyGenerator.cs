@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Rendering.PostProcessing;
-using UnityEditor.AI;
-
+using UnityEngine.AI;
 
 public class EnemyGenerator : MonoBehaviour
 {
@@ -28,6 +27,8 @@ public class EnemyGenerator : MonoBehaviour
 
     private int countAll;
 
+    public NavMeshSurface NavMeshSurfaceTerrain;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,14 +41,16 @@ public class EnemyGenerator : MonoBehaviour
 
         startScore = GameObject.FindGameObjectWithTag("Status").GetComponent<GenerateWorld>().gameInfo.Score;
 
+        NavMeshSurfaceTerrain = GameObject.FindGameObjectWithTag("Terrain").GetComponent<NavMeshSurface>();
+
         BuildNavMesh();
         CreateEnemies();
     }
 
     private void BuildNavMesh()
     {
-        NavMeshBuilder.ClearAllNavMeshes();
-        NavMeshBuilder.BuildNavMesh();
+        NavMeshSurfaceTerrain.RemoveData();
+        NavMeshSurfaceTerrain.BuildNavMesh();
     }
 
     private void UpdateText()

@@ -126,7 +126,7 @@ public class GenerateWorld : MonoBehaviour
     // Write GameInfo class to JSON file
     public void WriteLevelFile(GameInfo GI)
     {
-        string fileName = "Assets/Scripts/gameInfo.json";
+        string fileName = Path.Combine(Application.streamingAssetsPath,"gameInfo.json");
         string jsonString = JsonUtility.ToJson(GI);
         File.WriteAllText(fileName, jsonString);
     }
@@ -134,7 +134,7 @@ public class GenerateWorld : MonoBehaviour
     // Read a JSON file (by GameInfo class)
     public void ReadLevelFile()
     {
-        string jsonString = File.ReadAllText("Assets/Scripts/gameInfo.json");
+        string jsonString = File.ReadAllText(Path.Combine(Application.streamingAssetsPath, "gameInfo.json"));
         Debug.Log($"JSON READ -> {jsonString}");
         gameInfo = JsonUtility.FromJson<GameInfo>(jsonString);
         Debug.Log($"JSON READ GAMEINFO -> {gameInfo.Level}, {gameInfo.Score}");

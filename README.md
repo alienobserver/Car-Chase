@@ -17,6 +17,8 @@ Try to Destroy all the enemy cars and get high scores!
 
 ![screen_1920x1080_43](https://user-images.githubusercontent.com/59918929/124631475-77b7ea80-de94-11eb-9b43-b96b4165fef9.jpg)
 
+Install the game with "CAR CHASE Setup(x86).exe" Installer (Windows)
+
 ## License
 
 MIT

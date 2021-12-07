@@ -19,6 +19,12 @@ Try to Destroy all the enemy cars and get high scores!
 
 Install the game with **"Installations/CAR CHASE Setup(x86).exe"** Installer (Windows), or with **"Installations/CarChase_1.1-1_arm64.deb"*** for Debian distributies on arm64.
 
+Install Debian package with this command
+
+```sh
+sudo dpkg -i ./CarChase_1.1-1_arm64.deb
+```
+
 ## License
 
 MIT

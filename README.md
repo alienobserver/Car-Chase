@@ -22,7 +22,7 @@ Install the game with **"Installations/CAR CHASE Setup(x86).exe"** Installer (Wi
 Install Debian package with this command
 
 ```sh
-sudo dpkg -i ./CarChase_1.1-1_arm64.deb
+sudo dpkg -i ./Installations/CarChase_1.1-1_arm64.deb
 ```
 
 ## License
